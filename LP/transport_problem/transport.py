@@ -115,7 +115,6 @@ def solve(a, b, C):
 
     while True:
         u, v = find_potentials(C, basis)
-        min_delta = math.inf
         i0, j0 = min(no_basis, key=lambda x: C[x[0]][x[1]]-u[x[0]]-v[x[1]])
         min_delta = C[i0][j0]-u[i0]-v[j0]
         if min_delta >= 0:

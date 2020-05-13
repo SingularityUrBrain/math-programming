@@ -98,7 +98,7 @@ std::pair<std::vector<T>, std::vector<size_t>> main_phase(const std::vector<std:
             A_basis[j][i] = A[j][j_basis[i]-1];
 
     std::unordered_set<size_t> j_basis_set(j_basis.begin(), j_basis.end());
-    for (size_t i = 0, j = 0; i < n; i++){
+    for (size_t i = 0; i < n; i++){
         if(!j_basis_set.count(i+1)) j_n.push_back(i);
     }
     B = invert_matrix<T>(A_basis);
