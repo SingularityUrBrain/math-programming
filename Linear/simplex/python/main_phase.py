@@ -1,5 +1,4 @@
 import operator
-import math
 from sys import stdin, stdout
 
 
@@ -74,7 +73,7 @@ def main():
     while True:
         u_vec = vector_matrix_product(c_basis, B)
         uA_vec = vector_matrix_product(u_vec, A)
-        min_delta = math.inf
+        min_delta = float('inf')
         for j in j_n:
             d = uA_vec[j] - c[j]
             if d < min_delta:
@@ -87,14 +86,14 @@ def main():
             return
         col_to_replace = [row[j0] for row in A]
         z_vec = matrix_vector_product(B, col_to_replace)
-        omega_min = math.inf
+        omega_min = float('inf')
         for j in range(m):
             if z_vec[j] > 0:
                 om_i = x[j_basis[j]-1]/z_vec[j]
                 if om_i < omega_min:
                     omega_min = om_i
                     s = j
-        if omega_min == math.inf:
+        if omega_min == float('inf'):
             stdout.write('Unbounded\n')
             return
         # new plan

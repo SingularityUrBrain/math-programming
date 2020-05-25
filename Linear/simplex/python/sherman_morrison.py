@@ -11,7 +11,7 @@ def transpose(m):
 
 def matrix_product(m1, m2):
     if len(m1[0]) != len(m2):
-        raise Exception('m1, m2 are insuitable')
+        raise ValueError('m1, m2 are not suitable')
     m2_t = transpose(m2)
     return [[inner_product(row1, col2) for col2 in m2_t] for row1 in m1]
 

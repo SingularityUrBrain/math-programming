@@ -14,7 +14,7 @@ def sherman_morrison(B, x, k):
     l_vec = matrix_vector_product(B, x)
     l_k = l_vec[k]
     if l_k == 0:
-        # raise Exception('Matrix is singular.')
+        # raise ValueError('Matrix is singular.')
         return
     l_vec[k] = -1
     l_vec = [-el/l_k for el in l_vec]

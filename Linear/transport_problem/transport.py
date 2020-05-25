@@ -65,7 +65,7 @@ def find_cycle(m, n, basis):
 
 
 def find_potentials(C, basis):
-    inf = math.inf
+    inf = float('inf')
     u = [inf]*len(C)
     v = [inf]*len(C[0])
     u[0] = 0
