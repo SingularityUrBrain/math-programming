@@ -14,7 +14,8 @@ unsigned int dijkstra(unsigned int st, unsigned int end, const std::vector<std::
         unsigned int v = (*it).second;
         for(auto &p: graph[v]){
             if(ds[v] + p.first < ds[p.second]){
-                cands.erase(std::make_pair(ds[p.second], p.second));  // to update
+                if (ds[p.second] != UINT32_MAX)
+                    cands.erase(std::make_pair(ds[p.second], p.second));  // to update
                 ds[p.second] = ds[v] + p.first;
                 cands.insert(std::make_pair(ds[p.second], p.second));
             }
