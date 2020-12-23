@@ -26,5 +26,5 @@ Python and C++ solutions for some of the mathematical programming problems.
 ### Max length(cost) path in DAG
 * [Topological sort solution](https://github.com/SingularityUrBrain/math-programming/tree/master/MaxCostPath)
 ### Travelling salesman problem
-* [Dynamic programming solution](https://github.com/SingularityUrBrain/math-programming/tree/TSP_dp)
+* [Dynamic programming solution](https://github.com/SingularityUrBrain/math-programming/tree/master/TSP_dp)
 * [Simulated annealing soultion](https://github.com/SingularityUrBrain/math-programming/tree/master/StochasticOptimization/simulated_annealing)
