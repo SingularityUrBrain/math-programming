@@ -4,7 +4,7 @@
 #include <set>
 #include <fstream>
 
-// O(m*log(n))
+
 unsigned int dijkstra(unsigned int st, unsigned int end, const std::vector<std::vector<std::pair<unsigned int, unsigned int>>> &graph){
     std::set<std::pair<unsigned int, unsigned int>> cands {std::make_pair(0, st)};
     std::vector<unsigned int> ds(graph.size(), UINT32_MAX);

@@ -1,6 +1,6 @@
 import heapq as pq
 
-## O(n + m*log(m))
+
 def dijkstra(st, end, graph):
     heap = [(0, st)]
     ds = [float('inf')]*len(graph)
